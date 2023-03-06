@@ -18,16 +18,16 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        items = new String[][]{{"R.drawable.baseline_ac_unit_24", "Tomato", "a tropical plant with an edible fruit; it is the most economically significant plant in the family Bromeliaceae."},
-                {"R.drawable.baseline_account_circle_24", "Pineapple", "The pineapple (Ananas comosus) is a tropical plant with an edible fruit; it is the most economically significant plant in the family Bromeliaceae."},
-                {"R.drawable.baseline_directions_bus_filled_24", "Cherry", "A cherry is the fruit of many plants of the genus Prunus, and is a fleshy drupe (stone fruit). Red cherries with stems. Prunus avium, sweet cherry"},
-                {"R.drawable.baseline_ac_unit_24", "Avocado", "So Cuteee!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"},
-                {"R.drawable.baseline_account_circle_24", "Strawberry", "Be planted in Dalat!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1"},
-                {"R.drawable.baseline_volcano_24", "Papaya", "Is good for you!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1"},
-                {"R.drawable.baseline_directions_bus_filled_24", "Pear", "Leeeeeeeee!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"}};
+        items = new String[][]{{"baseline_volcano_24", "Tomato", "a tropical plant with an edible fruit; it is the most economically significant plant in the family Bromeliaceae."},
+                {"baseline_account_circle_24", "Pineapple", "The pineapple (Ananas comosus) is a tropical plant with an edible fruit; it is the most economically significant plant in the family Bromeliaceae."},
+                {"baseline_directions_bus_filled_24", "Cherry", "A cherry is the fruit of many plants of the genus Prunus, and is a fleshy drupe (stone fruit). Red cherries with stems. Prunus avium, sweet cherry"},
+                {"baseline_ac_unit_24", "Avocado", "So Cuteee!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"},
+                {"baseline_account_circle_24", "Strawberry", "Be planted in Dalat!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1"},
+                {"baseline_volcano_24", "Papaya", "Is good for you!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1"},
+                {"baseline_directions_bus_filled_24", "Pear", "Leeeeeeeee!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"}};
 
         mRecyclerView = findViewById(R.id.recyclerview);
-        mAdapter = new WordListAdapter(this, items);
+        mAdapter = new WordListAdapter(getApplicationContext(), items);
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 

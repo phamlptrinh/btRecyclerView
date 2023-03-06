@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.view.menu.MenuView;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class WordViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
@@ -29,9 +30,14 @@ public class WordViewHolder extends RecyclerView.ViewHolder implements View.OnCl
 
     @Override
     public void onClick(View view) {
-        String[] item = this.mAdapter.getItemByPos(this.getAbsoluteAdapterPosition());
+        String[] item = mAdapter.getItemByPos(this.getBindingAdapterPosition());
+
         Intent intent = new Intent(view.getContext(), detail.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.putExtra("item",item);
+        /*intent.putExtra("pic",item[0]);
+        intent.putExtra("tit",item[1]);
+        intent.putExtra("word",item[2]);*/
         view.getContext().startActivity(intent);
     }
 }

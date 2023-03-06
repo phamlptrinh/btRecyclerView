@@ -10,22 +10,25 @@
     <ImageView
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:id="@+id/pic">
+        android:id="@+id/pic1"
+        android:layout_gravity="center_horizontal">
 
     </ImageView>
 
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/title1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="32dp"
+            android:textSize="24dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
             style="@style/Widget.AppCompat.TextView">
         </TextView>
         <TextView
-            android:id="@+id/word"
+            android:id="@+id/word1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textSize="11dp"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
             style="@style/Widget.AppCompat.TextView">
         </TextView>
 

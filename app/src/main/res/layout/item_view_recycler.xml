@@ -12,7 +12,7 @@
     </ImageView>
 
     <LinearLayout
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
@@ -20,14 +20,14 @@
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="32dp"
+            android:textSize="24dp"
             style="@style/Widget.AppCompat.TextView">
         </TextView>
         <TextView
             android:id="@+id/word"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textSize="11dp"
+            android:textSize="16dp"
             style="@style/Widget.AppCompat.TextView">
         </TextView>
 

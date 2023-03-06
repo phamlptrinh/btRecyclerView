@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.LinkedList;
@@ -40,12 +41,11 @@ public class WordListAdapter
         String [] mCurrent = mWordList[position];
         //add data to the view
             //convert string data to id
+        //int idImg = this.context.getResources().getIdentifier(mCurrent[0],"drawable", "xml");
         int idImg = this.context.getResources().getIdentifier(mCurrent[0],"drawable", context.getPackageName());
-        //holder.imPic.setImageDrawable(Drawable.createFromPath(mCurrent[0].toString()));
         holder.imPic.setImageResource(idImg);
         holder.txTit.setText(mCurrent[1]);
         holder.txWord.setText(mCurrent[2].toCharArray(),0,30);
-        //holder.pos = position;
     }
 
 
